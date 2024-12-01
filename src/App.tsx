@@ -8,7 +8,7 @@ function App() {
     <>
       <Scene>
         <ScrollControls pages={3} damping={0.5}>
-        <Overlay/>
+          <Overlay />
           <Office />
         </ScrollControls>
       </Scene>

@@ -8,7 +8,6 @@ import { Group } from "three";
 export const FLOOR_HEIGHT = 2.3;
 export const NB_FLOORS = 3;
 
-
 export default function Office(props: Partial<GroupProps>) {
   const { nodes, materials } = useGLTF("/model/WawaOffice.glb") as unknown as {
     nodes: { [key: string]: THREE.Mesh };
@@ -19,6 +18,7 @@ export default function Office(props: Partial<GroupProps>) {
   const tl = useRef<gsap.core.Timeline | null>(null);
   const libraryRef = useRef<Group>(null);
   const atticRef = useRef<Group>(null);
+
   const scroll = useScroll();
 
   useFrame(() => {
@@ -124,7 +124,6 @@ export default function Office(props: Partial<GroupProps>) {
 
   return (
     <group
-
       {...props}
       dispose={null}
       ref={ref}
